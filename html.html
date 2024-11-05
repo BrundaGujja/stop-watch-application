@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.stopwatch {
+    text-align: center;
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+#display {
+    font-size: 2em;
+    margin: 20px 0;
+}
+
+.buttons button {
+    padding: 10px;
+    font-size: 1em;
+    margin: 5px;
+    border: none;
+    background-color: #555;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.buttons button:hover {
+    background-color: #777;
+}
+
+.lap-times {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.lap-times ul {
+    list-style: none;
+    padding: 0;
+}
+
+.lap-times li {
+    background: #444;
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+</style>
+<body>
+
+<div class="stopwatch">
+    <h1>Stopwatch</h1>
+    <div id="display">00:00:00</div>
+    <div class="buttons">
+        <button onclick="start()">Start</button>
+        <button onclick="pause()">Pause</button>
+        <button onclick="reset()">Reset</button>
+        <button onclick="lap()">Lap</button>
+    </div>
+    <div class="lap-times">
+        <h2>Lap Times</h2>
+        <ul id="laps"></ul>
+    </div>
+</div>
+
+<script src="mani.js"></script>
+</body>
+</html>
